@@ -40,6 +40,8 @@ public class PlayerMove : MonoBehaviour
     
     void CheckKeys()
     {
+        //not transform translate - try different movement code: player movement from sound class - adapt to all directions, not just one
+        //movetowards
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);

@@ -27,7 +27,7 @@ public class CameraFollow : MonoBehaviour
     {
         xMin = worldBounds.bounds.min.x;
         xMax = worldBounds.bounds.max.x;
-        Debug.Log(xMax);
+        //Debug.Log(xMax);
         yMin = worldBounds.bounds.min.y;
         yMax = worldBounds.bounds.max.y;
 
@@ -60,7 +60,7 @@ public class CameraFollow : MonoBehaviour
         //player position = smooth pos
         gameObject.transform.position = smoothPos;
 
-        Debug.Log(gameObject.transform.position);
+        //Debug.Log(gameObject.transform.position);
     }
 }
 

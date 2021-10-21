@@ -24,19 +24,23 @@ public class CowardlyEnemy : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) > followStopDist)
         {
             //enemy moves towards the player's position
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            float step = speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, player.position, step);
+            Debug.Log("follow");
         }
         //if the distance between the player pos is less than the follow stop distance but greater than retreat dist, (close but not too close)
-        else if (Vector2.Distance(transform.position, player.position) < followStopDist && Vector2.Distance(transform.position, player.position) > retreatDist)
+        /*else if (Vector2.Distance(transform.position, player.position) < followStopDist && Vector2.Distance(transform.position, player.position) > retreatDist)
         {
             //enemy will not move - it will stay where it is (position)
             transform.position = this.transform.position;
-        }
+        }*/
         //if the distance between the player's position is less than the retreat dist,
         else if (Vector2.Distance(transform.position, player.position) < retreatDist)
         {
+            float step = -speed * Time.deltaTime;
             //enemy will move away
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, step);
+            Debug.Log("RUN AWAY");
         }
     }
 }

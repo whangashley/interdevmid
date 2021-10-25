@@ -9,10 +9,13 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody2D myBody;
 
     [SerializeField] private GameObject WinScreen;
+    [SerializeField] private GameObject GameOverScreen;
 
     public int keysFound;
-    bool sixKeys = false;
+    public bool sixKeys = false;
     public float speed;
+
+    public bool playerDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +35,16 @@ public class PlayerMove : MonoBehaviour
             sixKeys = true;
         }
 
+        /*
         if (sixKeys == true)
         {
             WinScreen.SetActive(true);
         }
+
+        if (playerDead == true)
+        {
+            GameOverScreen.SetActive(true);
+        }*/
     }
     
     void CheckKeys()
@@ -70,13 +79,16 @@ public class PlayerMove : MonoBehaviour
             keysFound++;
             Destroy(collision.gameObject);
         }
+        /*
         //if player collides with object with enemy tag
         if (collision.gameObject.tag == "enemy")
         {
             SoundManager.PlaySound("playerHurt");
             //destroy player (me = gameObject)
-            Destroy(gameObject);
-        }
+            //Destroy(gameObject);
+
+            playerDead = true;
+        }*/
     }
 
 }

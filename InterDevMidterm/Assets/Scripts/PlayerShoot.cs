@@ -40,7 +40,7 @@ public class PlayerShoot : MonoBehaviour
         {
             if (Physics2D.Raycast(transform.position, transform.right, dist))
             {
-                if (Input.GetKey(KeyCode.Space))
+                if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2))
                 {
                     GameObject newBeam = Instantiate(beam, transform.position, transform.rotation);
                     //set beam's location to the player's location

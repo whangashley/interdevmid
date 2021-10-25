@@ -65,16 +65,18 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "key")
         {
+            SoundManager.PlaySound("keySound");
+            //keySound.Play();
             keysFound++;
             Destroy(collision.gameObject);
         }
         //if player collides with object with enemy tag
         if (collision.gameObject.tag == "enemy")
         {
+            SoundManager.PlaySound("playerHurt");
             //destroy player (me = gameObject)
             Destroy(gameObject);
         }
     }
-
 
 }

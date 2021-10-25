@@ -21,6 +21,7 @@ public class BeamBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
+            SoundManager.PlaySound("veggieKillAudio");
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

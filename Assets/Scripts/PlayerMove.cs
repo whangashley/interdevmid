@@ -8,21 +8,21 @@ public class PlayerMove : MonoBehaviour
     //public float speed;
     public Rigidbody2D myBody;
 
-    [SerializeField] private GameObject WinScreen;
-    [SerializeField] private GameObject GameOverScreen;
+    //[SerializeField] private GameObject WinScreen;
+    //[SerializeField] private GameObject GameOverScreen;
 
-    public int keysFound;
-    public bool sixKeys = false;
+    //public int keysFound;
+    //public bool sixKeys = false;
     public float speed;
 
-    public bool playerDead = false;
+    //public bool playerDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
         myBody = gameObject.GetComponent<Rigidbody2D>();
         myBody.gravityScale = 0;
-        keysFound = 0;
+        //keysFound = 0;
     }
 
     // Update is called once per frame
@@ -30,10 +30,11 @@ public class PlayerMove : MonoBehaviour
     {
         CheckKeys();
 
+        /*
         if (keysFound == 6)
         {
             sixKeys = true;
-        }
+        }*/
 
         /*
         if (sixKeys == true)
@@ -69,7 +70,7 @@ public class PlayerMove : MonoBehaviour
             transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
     }
-
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "key")
@@ -79,7 +80,7 @@ public class PlayerMove : MonoBehaviour
             keysFound++;
             Destroy(collision.gameObject);
         }
-        /*
+        
         //if player collides with object with enemy tag
         if (collision.gameObject.tag == "enemy")
         {
@@ -88,7 +89,7 @@ public class PlayerMove : MonoBehaviour
             //Destroy(gameObject);
 
             playerDead = true;
-        }*/
-    }
+        }
+    }*/
 
 }

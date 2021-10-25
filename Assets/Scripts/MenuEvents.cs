@@ -1,6 +1,8 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+//code based off of GDTitan's youtube tutorials
+
 public class MenuEvents : MonoBehaviour
 {
     // Start is called before the first frame update

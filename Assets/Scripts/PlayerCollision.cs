@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keysFound == 1)
+        if (keysFound == 6)
         {
             sixKeys = true;
         }
@@ -40,8 +40,6 @@ public class PlayerCollision : MonoBehaviour
 
         if (collision.gameObject.tag == "key")
         {
-            //SoundManager.PlaySound("keySound");
-            //keySound.Play();
             keysFound++;
             Destroy(collision.gameObject);
         }

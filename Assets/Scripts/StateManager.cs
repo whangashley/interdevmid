@@ -34,19 +34,6 @@ public class StateManager : MonoBehaviour
         {
             gameWinScreen.SetActive(true);
         }
-
-
-
-        /*
-        if (sixKeys == true)
-        {
-            WinScreen.SetActive(true);
-        }
-
-        if (playerDead == true)
-        {
-            GameOverScreen.SetActive(true);
-        }*/
     }
 
     public void TryAgain()
